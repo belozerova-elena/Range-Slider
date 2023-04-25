@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+$font: 'Open Sans', sans-serif;
+// COLORS
+$violet: #512da8;
+$purple: #673ab7;
+$white: #fff;
+$light: #edf1f4;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: $font;
+  font-size: 18px;
+  color: $white;
+  background: $purple;
+  background: linear-gradient(to right, $purple, $violet);
+}
+.range {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 40px;
+  &__input {
+    width: 400px;
+    height: 15px;
+    background-color: $light;
+    border-radius: 15px;
+    appearance: none;
+    outline: none;
+    overflow: hidden;
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 2px solid $violet;
+      box-shadow: -407px 0 0 400px $purple;
+      cursor: pointer;    
+    }
+  }
+  &__value {
+    position: relative;
+    width: 60px;
+    margin-left: 15px;
+    padding: 4px 0;
+    text-align: center;
+    background-color: $violet;
+    border-radius: 25px;  
+  }
+}
